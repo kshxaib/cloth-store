@@ -8,9 +8,9 @@ const testRegister = async () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: 'Test User',
-                email: 'testuser@example.com',
-                password: 'password123'
+                name: 'Khan Shoaib',
+                email: 'khanshoaib@example.com',
+                password: 'password'
             })
         });
 

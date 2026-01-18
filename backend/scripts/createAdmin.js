@@ -1,15 +1,15 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import User from './models/User.js';
+import User from '../models/User.js';
 
 dotenv.config();
 
 const createAdmin = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect("mongodb+srv://khanshoaibro100_db_user:jcVznJtnraqP6otQ@divinedb.ad32kci.mongodb.net/?appName=divinedb");
         console.log('MongoDB Connected');
 
-        const adminEmail = process.env.ADMIN_EMAIL || 'admin@divine.com';
+        const adminEmail = 'admin@divine.com';
 
         // Check if admin already exists
         const existingAdmin = await User.findOne({ email: adminEmail });
@@ -28,14 +28,14 @@ const createAdmin = async () => {
         const admin = await User.create({
             name: 'Admin',
             email: adminEmail,
-            password: 'admin123', // Change this password after first login
+            password: 'password', 
             role: 'admin'
         });
 
         console.log('\n✅ Admin user created successfully!');
         console.log('\nAdmin Login Credentials:');
         console.log('Email:', admin.email);
-        console.log('Password: admin123');
+        console.log('Password: password');
         console.log('\n⚠️  Please change the password after first login!');
 
         process.exit(0);

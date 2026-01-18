@@ -226,7 +226,7 @@ const productTemplates = {
 const seedDatabase = async () => {
     try {
         // Connect to MongoDB
-        await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect("mongodb+srv://khanshoaibro100_db_user:jcVznJtnraqP6otQ@divinedb.ad32kci.mongodb.net/?appName=divinedb");
         console.log('MongoDB Connected');
 
         // Clear existing data
