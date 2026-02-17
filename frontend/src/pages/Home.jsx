@@ -50,7 +50,7 @@ const Home = () => {
             {/* Eyebrow */}
             <div className="mb-6">
               <span className="inline-block border-2 border-white px-4 py-2 text-sm font-semibold tracking-widest">
-                SPRING 2024 COLLECTION
+                SPRING 2026 COLLECTION
               </span>
             </div>
 
